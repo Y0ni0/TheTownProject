@@ -46,3 +46,26 @@ function reportParks(p){
     console.log(`${p[i].name} has more than 1000 trees.`);
 
 }
+class Streets extends Town{
+    constructor(name,buildYear, streetLength, size = 3){
+        super(name, buildYear);
+        this.streetLength = streetLength;
+        this.size = size;
+    }
+    totalLength(){
+        return this.length 
+    }
+    avelength(){
+
+    }
+    catagory() {
+        const streetType = new Map();
+        streetType.set(1, 'Tiny');
+        streetType.set(2, 'small');
+        streetType.set(3, 'normal');
+        streetType.set(4, 'Big'); 
+        streetType.set(5, 'Huge');
+        console.log(`${this.name}, built in ${this.buildYear}, is a ${streetType.get(this.size)} street.`);
+    }
+}
+
