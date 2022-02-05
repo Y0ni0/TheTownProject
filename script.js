@@ -46,3 +46,15 @@ function reportParks(p){
     console.log(`${p[i].name} has more than 1000 trees.`);
 
 }
+const allParks = [ 
+    new Parks('Green Park', 1999, 6400, 1900),
+    new Parks('National Park', 1988, 760, 600), 
+    new Parks('Oak Park', 1976, 400, 405)
+];
+
+const allStreets = [
+    new Streets('Ocean Avenue', 1999, 450, 4), 
+    new Streets('Evergreen Street', 2008, 250, 2),
+    new Streets('4th Street', 2015, 350),
+    new Streets('Sunset Boulevard', 1982, 540, 5)
+];
