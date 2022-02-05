@@ -83,3 +83,18 @@ function reportParks(p){
 
 }
 
+//street Report
+function reportStreet(s) {
+
+    console.log(`----Street Report----`);
+
+    // Total and average length of the town's streets
+    const [totalLength, avgLength] = calc(s.map(el => el.streetLength));
+    console.log(`Our ${s.length} streets have a total length of ${totalLength} km with an average of ${avgLength} km.`);
+
+    //classify sizes
+    s.forEach(el => el.catagory());
+}
+
+reportParks(allParks);
+reportStreet(allStreets);
