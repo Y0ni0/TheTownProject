@@ -78,8 +78,8 @@ function reportParks(p){
 
 
     //Which park has more than 1000 trees
-    const i = p.map(el => el.treeNum).findIndex(el => el >= 1000);
-    console.log(`${p[i].name} has more than 1000 trees.`);
+    const [i] = p.filter(el => el.treeNum >= 1000)
+    console.log(`${i.name} has more than 1000 trees.`);
 
 }
 
