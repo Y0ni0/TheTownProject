@@ -46,6 +46,8 @@ function reportParks(p){
     console.log(`${p[i].name} has more than 1000 trees.`);
 
 }
+
+
 class Streets extends Town{
     constructor(name,buildYear, streetLength, size = 3){
         super(name, buildYear);
