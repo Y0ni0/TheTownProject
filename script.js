@@ -80,8 +80,23 @@ function reportParks(p){
 
 
     //Which park has more than 1000 trees
-    const i = p.map(el => el.treeNum).findIndex(el => el >= 1000);
-    console.log(`${p[i].name} has more than 1000 trees.`);
+    const [i] = p.filter(el => el.treeNum >= 1000)
+    console.log(`${i.name} has more than 1000 trees.`);
 
 }
 
+//street Report
+function reportStreet(s) {
+
+    console.log(`----Street Report----`);
+
+    // Total and average length of the town's streets
+    const [totalLength, avgLength] = calc(s.map(el => el.streetLength));
+    console.log(`Our ${s.length} streets have a total length of ${totalLength} km with an average of ${avgLength} km.`);
+
+    //classify sizes
+    s.forEach(el => el.catagory());
+}
+
+reportParks(allParks);
+reportStreet(allStreets);
