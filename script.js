@@ -20,3 +20,29 @@ class Parks extends Town{
        return parkage;
    } 
 }
+
+function calc(arr){
+    const sum = arr.reduce((prev, cur, index) => prev + cur, 0);
+    return [sum, sum / arr.length];
+    
+}
+
+//Park Report
+function reportParks(p){
+
+    console.log(`----Park Report----`);
+    
+    //calculating park density
+    p.forEach(park => park.calcDensity());
+
+    //calculate Average age
+    const ages = p.map(el => new Date().getFullYear() - el.buildYear);	
+    const [totalAge, avgAge] = calc(ages);
+    console.log(`Our ${p.length} parks have an average of ${avgAge} years.`);
+
+
+    //Which park has more than 1000 trees
+    const i = p.map(el => el.treeNum).findIndex(el => el >= 1000);
+    console.log(`${p[i].name} has more than 1000 trees.`);
+
+}
