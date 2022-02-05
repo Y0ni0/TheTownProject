@@ -20,3 +20,9 @@ class Parks extends Town{
        return parkage;
    } 
 }
+
+function calc(arr){
+    const sum = arr.reduce((prev, cur, index) => prev + cur, 0);
+    return [sum, sum / arr.length];
+    
+}
