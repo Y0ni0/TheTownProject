@@ -20,13 +20,6 @@ class Parks extends Town{
        return parkage;
    } 
 }
-class Streets extends Town{
-    constructor(name, year, id, streatArea){
-        super(name,year);
-        this.id=id;
-        this.streatArea=streatArea;
-    }
-}
 
 function calc(arr){
     const sum = arr.reduce((prev, cur, index) => prev + cur, 0);
