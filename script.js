@@ -59,15 +59,13 @@ const allStreets = [
 
 function calc(arr){
     const sum = arr.reduce((prev, cur, index) => prev + cur, 0);
-    const divided = sum/arr.length;
-    return [sum, divided];
+    return [sum, sum / arr.length];
     
 }
 
 //Park Report
 function reportParks(p){
 
-    
     console.log(`----Park Report----`);
     
     //calculating park density
