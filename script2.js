@@ -11,10 +11,22 @@
 // }
 // first();
 
+//call back hell
     function getrecipe(){
         setTimeout( () =>{
             const recipeID = [189, 236, 873, 382];
             console.log(recipeID);
-        }, 1500)
+
+            setTimeout( id =>{
+                const recipe = {title: 'Fresh Tomat pasta', publisher: 'Yoni'};
+                console.log(`${id}: ${recipe.title}`);
+
+                setTimeout( publisher =>{
+                    const recipe2 = {title: 'italian pizza', publisher: 'Yoni'};
+                    console.log(recipe2);
+
+                }, 1500, recipe.publisher);
+            }, 1500, recipeID[2]);
+        }, 1500);
     }
     getrecipe();
